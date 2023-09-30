@@ -1,0 +1,35 @@
+# 2.建立github account，且新增一個repository
+# 2.1到terminal cd Document homework(local端想存放的位置)
+# 將README.md檔案加入homework專案中
+echo "# homework" >> README.md
+# 創建一個新文件夾，用來儲存新的git
+git init
+git add README.md
+# 確認狀態
+git status
+# 執行commit
+git commit -m "commit"
+# 可以先確認是否有異常，本次只會有1insertion(+)
+git branch -M main
+git remote add origin https://github.com/WENBBBY/homework.git
+# 將local push到remote main
+git push -u origin main
+
+---執行完以上，可以在github上看到main分支---
+
+# 2.2
+# 確認remote main更新最新到local
+git pull origin main
+# 開一個新的dev分支
+git branch dev
+# 切換到dev分支下
+git checkout dev
+# 把local的txt檔案push到remote的dev分支
+git add git.txt
+git commit -m "add git.txt"
+git push origin dev
+
+---以下小筆記---
+在git push origin時，跳remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/WENBBBY/homework.git/'
+可以去github取token，將password輸入token即可
