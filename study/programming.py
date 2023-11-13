@@ -20,7 +20,7 @@ score = int(input('請輸入英文成績?'))
 if score >= 60:
     print('及格！')
 else:
-    print('不及格')
+    print('不及格') 
 
 #3、多向選擇 if...elif...else
 print('🖍️3、多向選擇 if...elif...else(如果...就...否則就...)：當第一個條件成立時可以執行if下的程式區塊，不然就看第二個條件是否成立，成立時就執行該elif下的程式區塊，以此類推。')
